@@ -11,7 +11,8 @@
     KeyDown="Window_KeyDown"
     Background="Black"
     ResizeMode="NoResize"
-    WindowStyle="None">
+    WindowStyle="None"
+    Loaded="Window_Loaded">
     <Grid
         Name="MainGrid"
         Background="Wheat"
@@ -51,18 +52,16 @@
                 VerticalAlignment="Center"
                 FontWeight="Bold"
                 FontSize="18" />
-            <StackPanel
-                Orientation="Horizontal">
-                <Image
-                    Name="ImageSpeakers"
-                    IsEnabled="False"
-                    HorizontalAlignment="Center"
-                    Height="144"
-                    Margin="4"
-                    VerticalAlignment="Center"
-                    Stretch="Fill"
-                    Width="244" />
-            </StackPanel>
+            <Image
+                Name="Imaged"
+                IsEnabled="False"
+                HorizontalAlignment="Center"
+                Height="188"
+                Margin="4"
+                VerticalAlignment="Center"
+                Stretch="Fill"
+                Source="speakergold-size.png"
+                Width="188" />
         </StackPanel>
         <StackPanel
             Grid.Row="2"
@@ -100,7 +99,7 @@
                 FontWeight="Bold"
                 Height="16"
                 Padding="2"
-                Background="Transparent" />
+                Background="Transparent"/>
             <!--<Button
                 Name="btnNO"
                 Margin="2"

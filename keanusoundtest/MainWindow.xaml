@@ -1,0 +1,115 @@
+﻿<Window
+    x:Class="keanusoundtest.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="SPEAKERS"
+    Topmost="True"
+    SizeToContent="WidthAndHeight"
+    WindowStartupLocation="CenterScreen"
+    KeyDown="Window_KeyDown"
+    Background="Black"
+    ResizeMode="NoResize"
+    WindowStyle="None"
+    Loaded="Window_Loaded">
+    <Grid
+        Name="MainGrid"
+        Background="Wheat"
+        Margin="6"
+        Height="256"
+        Width="256"
+        HorizontalAlignment="Center"
+        VerticalAlignment="Center">
+        <Grid.RowDefinitions>
+            <RowDefinition
+                Height="auto" />
+            <RowDefinition
+                Height="*" />
+            <RowDefinition
+                Height="auto" />
+        </Grid.RowDefinitions>
+        <Button
+            Name="btnExit"
+            Click="btnExit_Click"
+            FontSize="10"
+            FontWeight="Bold"
+            HorizontalAlignment="Right"
+            Width="18"
+            Height="18"
+            VerticalAlignment="Center"
+            Margin="1"
+            Background="Transparent">X</Button>
+        <StackPanel
+            Grid.Row="1"
+            Orientation="Vertical"
+            VerticalAlignment="Center"
+            HorizontalAlignment="Center">
+            <TextBlock
+                Name="tbTitle"
+                Text="SPEAKERS"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center"
+                FontWeight="Bold"
+                FontSize="18" />
+            <Image
+                Name="Imaged"
+                IsEnabled="False"
+                HorizontalAlignment="Center"
+                Height="188"
+                Margin="4"
+                VerticalAlignment="Center"
+                Stretch="Fill"
+                Source="speakergold-size.png"
+                Width="188" />
+        </StackPanel>
+        <StackPanel
+            Grid.Row="2"
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <!--<Button
+                Name="btnOK"
+                Margin="2"
+                Content="[1] OK"
+                VerticalAlignment="Center"
+                Click="btnSwitchColor_Click"
+                Height="24"
+                Width="56"
+                FontSize="8"
+                FontWeight="Bold" />-->
+            <!--<Button
+                Name="btnExit"
+                Margin="2"
+                Content="[ESC] SALIR"
+                VerticalAlignment="Top"
+                Click="btnExit_Click"
+                Height="24"
+                Width="56"
+                HorizontalAlignment="Left"
+                FontSize="8"
+                FontWeight="Bold" />-->
+            <Button
+                Name="btnPlaySound"
+                Margin="2"
+                Content="[ESPACIO] PLAY"
+                VerticalAlignment="Center"
+                Click="btnPlaySound_Click"
+                FontSize="8"
+                FontWeight="Bold"
+                Height="16"
+                Padding="2"
+                Background="Transparent"/>
+            <!--<Button
+                Name="btnNO"
+                Margin="2"
+                Content="[5] NO"
+                VerticalAlignment="Top"
+                Click="btnExit_Click"
+                Height="24"
+                Width="56"
+                FontSize="8"
+                FontWeight="Bold" />-->
+        </StackPanel>
+    </Grid>
+</Window>

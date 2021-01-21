@@ -96,15 +96,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SoundTest.wav" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="speakergoldL.png" />
-    <Resource Include="speakergoldLd.png" />
-    <Resource Include="speakergoldR.png" />
-    <Resource Include="speakergoldRd.png" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="SoundTestL.wav" />
     <EmbeddedResource Include="SoundTestR.wav" />
   </ItemGroup>

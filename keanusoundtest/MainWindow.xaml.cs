@@ -15,17 +15,18 @@ namespace keanusoundtest
     public partial class MainWindow : Window
     {
         private MediaPlayer mp = new MediaPlayer();
+        private bool canPlay = true;
         public MainWindow()
         {
             InitializeComponent();
-            SetSystemVolToMax();
+          
             InitializeSoundFiles();
             mp.MediaEnded += MediaEnded_EventHandler;
-            mp.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "SoundTestL.wav"));
             this.Activated += MainWindow_Activated;
             this.Deactivated += MainWindow_Deactivated;
             ImageSpeakers.Source = new BitmapImage(new Uri("/keanusoundtest;component/BOTHDISABLED.png", UriKind.Relative));
             ImageSpeakers.Tag = "AmbosDesactivados";
+            mp.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "SoundTestL.wav"));
         }
 
         private void MainWindow_Deactivated(object sender, EventArgs e)
@@ -71,12 +72,14 @@ namespace keanusoundtest
 
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
+            if (canPlay == false) return;
             if (e.Key == Key.Space) { PlaySound(); }
             if (e.Key == Key.Escape) { Application.Current.Shutdown(); }
         }
 
         private void PlaySound()
         {
+            canPlay = false;
             switch (ImageSpeakers.Tag.ToString())
             {
                 case "AmbosDesactivados":
@@ -95,22 +98,20 @@ namespace keanusoundtest
 
         private void MediaEnded_EventHandler(object sender, EventArgs e)
         {
-            //                case "IzquierdoDesactivado":
-            //        ImageSpeakers.Source = new BitmapImage(new Uri("/keanusoundtest;component/BOTHDISABLED.png", UriKind.Relative));
-            //ImageSpeakers.Tag = "AmbosDesactivados";
-            //break;
             if (mp.Source.LocalPath == (AppDomain.CurrentDomain.BaseDirectory + "SoundTestL.wav"))
             {
                 ImageSpeakers.Source = new BitmapImage(new Uri("/keanusoundtest;component/IZQDISABLED.png", UriKind.Relative));
+                ImageSpeakers.Tag = "IzquierdoDesactivado";
                 mp.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "SoundTestR.wav"));
                 PlaySound();
             }
             else
             {
                 mp.Open(new Uri(AppDomain.CurrentDomain.BaseDirectory + "SoundTestL.wav"));
-                
+                ImageSpeakers.Source = new BitmapImage(new Uri("/keanusoundtest;component/BOTHDISABLED.png", UriKind.Relative));
+                ImageSpeakers.Tag = "AmbosDesactivados";
+                canPlay = true;
             }
-
         }
         private async void SetSystemVolToMax()
         {
@@ -128,6 +129,7 @@ namespace keanusoundtest
 
         private void btnPlaySound_Click(object sender, RoutedEventArgs e)
         {
+            if (canPlay == false) return;
             PlaySound();
         }
 
@@ -139,6 +141,11 @@ namespace keanusoundtest
         private void btnNO_Click(object sender, RoutedEventArgs e)
         {
             Application.Current.Shutdown(1);
+        }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            SetSystemVolToMax();
         }
     }
 }

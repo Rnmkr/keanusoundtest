@@ -11,7 +11,8 @@
     KeyDown="Window_KeyDown"
     Background="Black"
     ResizeMode="NoResize"
-    WindowStyle="None">
+    WindowStyle="None"
+    Loaded="Window_Loaded">
     <Grid
         Name="MainGrid"
         Background="Wheat"
@@ -51,18 +52,13 @@
                 VerticalAlignment="Center"
                 FontWeight="Bold"
                 FontSize="18" />
-            <StackPanel
-                Orientation="Horizontal">
-                <Image
-                    Name="ImageSpeakers"
-                    IsEnabled="False"
-                    HorizontalAlignment="Center"
-                    Height="144"
-                    Margin="4"
-                    VerticalAlignment="Center"
-                    Stretch="Fill"
-                    Width="244" />
-            </StackPanel>
+            <Image
+                Width="244"
+                Height="144"
+                Name="ImageSpeakers"
+                IsEnabled="False"
+                Margin="4"
+                Stretch="Fill" />
         </StackPanel>
         <StackPanel
             Grid.Row="2"

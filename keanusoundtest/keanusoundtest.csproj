@@ -99,10 +99,19 @@
     <EmbeddedResource Include="SoundTest.wav" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="speakergold-size.png" />
+    <Resource Include="speakergoldL.png" />
+    <Resource Include="speakergoldLd.png" />
+    <Resource Include="speakergoldR.png" />
+    <Resource Include="speakergoldRd.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="speakergold-size-d.png" />
+    <EmbeddedResource Include="SoundTestL.wav" />
+    <EmbeddedResource Include="SoundTestR.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="BOTHDISABLED.png" />
+    <Resource Include="DERDISABLED.png" />
+    <Resource Include="IZQDISABLED.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

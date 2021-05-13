@@ -95,7 +95,7 @@ namespace keanusoundtest
         private void Window_KeyDown(object sender, KeyEventArgs e)
         {
             if (canPlay == false) return;
-            if (e.Key == Key.Space) { PlaySound(); }
+            if (e.Key == Key.Space) { PlayLongSound(); }
             if (e.Key == Key.Escape) { Application.Current.Shutdown(); }
         }
 

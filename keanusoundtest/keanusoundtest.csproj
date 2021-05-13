@@ -105,8 +105,10 @@
     <Resource Include="IZQDISABLED.png" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LongSoundTestL.wav" />
     <EmbeddedResource Include="LongSoundTestR.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="LongSoundTestL.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -86,10 +86,27 @@
                 HorizontalAlignment="Left"
                 FontSize="8"
                 FontWeight="Bold" />-->
+            <TextBlock
+                Margin="4"
+                Name="VerTb"
+                Text="Version"
+                HorizontalAlignment="Center"
+                VerticalAlignment="Center" />
+            <Button
+                Name="btnPlayLongSound"
+                Margin="2"
+                Content="[CLICK] SONIDO LARGO"
+                VerticalAlignment="Center"
+                Click="btnPlayLongSound_Click"
+                FontSize="8"
+                FontWeight="Bold"
+                Height="16"
+                Padding="2"
+                Background="Transparent" />
             <Button
                 Name="btnPlaySound"
                 Margin="2"
-                Content="[ESPACIO] PLAY"
+                Content="[CLICK/ESPACIO] PLAY"
                 VerticalAlignment="Center"
                 Click="btnPlaySound_Click"
                 FontSize="8"

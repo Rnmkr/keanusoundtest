@@ -96,19 +96,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SoundTestL.wav" />
-    <EmbeddedResource Include="SoundTestR.wav" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="BOTHDISABLED.png" />
     <Resource Include="DERDISABLED.png" />
     <Resource Include="IZQDISABLED.png" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="LongSoundTestL.wav" />
     <EmbeddedResource Include="LongSoundTestR.wav" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="LongSoundTestL.wav" />
+    <EmbeddedResource Include="SoundTestL.wav" />
+    <EmbeddedResource Include="SoundTestR.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

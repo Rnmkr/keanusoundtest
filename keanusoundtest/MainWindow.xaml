@@ -95,7 +95,7 @@
             <Button
                 Name="btnPlayLongSound"
                 Margin="2"
-                Content="[CLICK] SONIDO CLASICO"
+                Content="[ENTER] GALAXIAN"
                 VerticalAlignment="Center"
                 Click="btnPlaySound_Click"
                 FontSize="8"
@@ -106,7 +106,7 @@
             <Button
                 Name="btnPlaySound"
                 Margin="2"
-                Content="[CLICK/ESPACIO] PLAY"
+                Content="[ESPACIO] CLASICO"
                 VerticalAlignment="Center"
                 Click="btnPlayLongSound_Click"
                 FontSize="8"
